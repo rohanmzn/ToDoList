@@ -44,10 +44,10 @@ function App() {
 
   const deleteAll = () => {
     setTodos([]);
-    setAlertMessage("All To-D os have been deleted");
-    setAlertType("danger"); // Red alert for delete action
+    setAlertMessage("All To-Dos have been deleted");
+    setAlertType("danger");
     setTimeout(() => {
-      setAlertMessage(""); // Hide the alert after 3 seconds
+      setAlertMessage("");
     }, 3000);
   };
 
@@ -61,13 +61,13 @@ function App() {
       {todos.length > 0 && (
         <button
           onClick={() => {
-            if (window.confirm("Are you sure you want to delete all todos?")) {
+            if (window.confirm("Are you sure you want to delete all?")) {
               deleteAll();
             }
           }}
           className="btn btn-danger mt-3"
         >
-          Delete All
+          Clear All
         </button>
       )}
 
