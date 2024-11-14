@@ -1,5 +1,5 @@
 import React from "react";
-import TodoItem from "./TodoItem";
+import TodoItem from "../components/TodoItem";
 
 const TodoList = ({ todos, toggleTodo, deleteTodo }) => {
   return (
@@ -11,7 +11,7 @@ const TodoList = ({ todos, toggleTodo, deleteTodo }) => {
         return (
           <TodoItem
             key={todo.id}
-            {...todo} // Spread the todo object to pass all properties (id, title, completed)
+            {...todo}
             toggleTodo={toggleTodo}
             deleteTodo={deleteTodo}
           />

@@ -1,29 +1,19 @@
+// TodoItem.jsx
 import React from "react";
+import DeleteButton from "./DeleteButton";
 
 const TodoItem = ({ completed, id, title, toggleTodo, deleteTodo }) => {
   return (
-    <li
-      key={id}
-      style={{ cursor: "pointer" }}
-      onClick={() => toggleTodo(id)} // Toggle checkbox on li click
-    >
+    <li key={id} style={{ cursor: "pointer" }} onClick={() => toggleTodo(id)}>
       <label>
         <input
           type="checkbox"
           checked={completed}
-          onChange={() => toggleTodo(id)} // Ensure it still toggles when checkbox is clicked
+          onChange={() => toggleTodo(id)}
         />
         {title}
       </label>
-      <button
-        className="btn btn-danger"
-        onClick={(e) => {
-          e.stopPropagation(); // Prevent triggering the li click event
-          deleteTodo(id); // Delete the todo
-        }}
-      >
-        Delete
-      </button>
+      <DeleteButton id={id} deleteTodo={deleteTodo} todoTitle={title} />{" "}
     </li>
   );
 };
