@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="gradient-line"></div>
       <div className="social-links">
-        Created by Roharzan&nbsp;
+        Created by roharzan&nbsp;
         <a
           href="https://rohanmaharjan02.com.np/"
           target="_blank"

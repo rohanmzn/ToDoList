@@ -44,7 +44,7 @@ function App() {
 
   const deleteAll = () => {
     setTodos([]);
-    setAlertMessage("All To-Dos have been deleted");
+    setAlertMessage("All To-D os have been deleted");
     setAlertType("danger"); // Red alert for delete action
     setTimeout(() => {
       setAlertMessage(""); // Hide the alert after 3 seconds
